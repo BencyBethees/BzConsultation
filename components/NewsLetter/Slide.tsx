@@ -29,7 +29,7 @@ const Slide = () => {
       title: (
         <>
           From Vision to Reality: <br />
-          BzAnalytics's Journey from <br /> 2020 to 2023
+          BzAnalytics&apos;s Journey from <br /> 2020 to 2023
         </>
       ),
       category: "News",

@@ -7,7 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import AOS from "aos";
-import "aos/dist/aos.css";
+
 import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
 
 interface Service {
@@ -35,7 +35,7 @@ const HeroBackground = () => {
   );
 };
 
-const page = () => {
+const Page = () => {
   const [services, setServices] = useState<Service[]>([]);
 
   const [showArrow, setShowArrow] = useState(false);
@@ -101,11 +101,11 @@ const page = () => {
         </div>
 
         <p className="uppercase text-xs sm:text-sm md:text-sm mb-2">
-          What We're Offering
+          What We&apos;re Offering
         </p>
 
         <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-[46px] font-extrabold leading-12">
-          Services we're providing <br />
+          Services we&apos;re providing <br />
           to our customers
         </h1>
       </div>
@@ -264,7 +264,7 @@ const page = () => {
                   </h3>
                   <p className=" theme-text text-sm sm:text-base leading-relaxed">
                     Our team of seasoned professionals brings a wealth of
-                    expertise and experience to ensure your project's success.
+                    expertise and experience to ensure your project&apos;s success.
                   </p>
                 </div>
               </div>
@@ -366,7 +366,7 @@ px-2 sm:px-3 md:px-4
             <div className="absolute inset-0 bg-black/60 -translate-y-full flex flex-col items-center justify-center text-center p-4 transition-transform duration-500 group-hover:translate-y-0">
               <p className="text-white mb-3 text-sm sm:text-base">
                 Flexible teams for custom software development, scaling, and
-                extending your internal team's capabilities, led by dedicated
+                extending your internal team&apos;s capabilities, led by dedicated
                 developers and product owners.
               </p>
               <p className="flex items-center gap-2 text-sm font-medium cursor-pointer transition-all duration-300 ease-in-out text-white hover:text-orange-400 group">
@@ -470,7 +470,7 @@ px-2 sm:px-3 md:px-4
             UNLEASHING YOUR MAXIMUM POTENTIAL
           </span>
           <span className="mx-5 tracking-wider">
-            LET'S START WORKING TOGETHER
+            LET&apos;S START WORKING TOGETHER
           </span>
         </div>
       </div>
@@ -478,4 +478,4 @@ px-2 sm:px-3 md:px-4
   );
 };
 
-export default page;
+export default Page;

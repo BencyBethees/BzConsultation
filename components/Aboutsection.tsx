@@ -32,7 +32,7 @@ export default function AboutSection() {
                             <h4 className="about-three__content__heading">Digital Transformation Towards Web 4.0.</h4>
                             <p className="about-three__content__text">
                                 We believe that a big part of our difference is the adaptability and integrability of our solutions.It was a seismic moment for BzAnalytics that the decision by our organisation to launch our global hub at Dubai,BzAnalytics Information Technology.Our
-                                primary goals and objectives - as we live in the "Experience Economy" brand loyalty is increasingly becoming a thing of the past.We have been evolving with complex business issues is a key market&nbsp;differentiator.
+                                primary goals and objectives - as we live in the &quot;Experience Economy&quot; brand loyalty is increasingly becoming a thing of the past.We have been evolving with complex business issues is a key market&nbsp;differentiator.
                             </p>
                             <div className="about-three__author">
                                 <div className="about-three__author__thumb"><img src="/assets/images/team/BEEGUM_PAMEELA.png" alt="Beegum Pameela" loading="lazy"/></div>

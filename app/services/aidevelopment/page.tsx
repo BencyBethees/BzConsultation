@@ -18,7 +18,7 @@ const services = [
   "Website Testing Services",
 ];
 
-const page = () => {
+const Page = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showArrow, setShowArrow] = useState(false);
 
@@ -102,7 +102,7 @@ const page = () => {
                 to transform your business and drive unparalleled growth. With a
                 team of highly skilled AI experts and data scientists, we are
                 committed to delivering innovative and tailored AI solutions to
-                meet your unique business needs. Whether you're a startup or an
+                meet your unique business needs. Whether you&apos;re a startup or an
                 established enterprise, our AI development services will help
                 you stay ahead of the competition and embrace the future of
                 technology.
@@ -177,7 +177,7 @@ const page = () => {
               <p className="mt-7 leading-loose text-[16px]">
                 {" "}
                 Tailored Solutions:We understand that every business is unique.
-                That's why our AI development services are customized to address
+                That&apos;s why our AI development services are customized to address
                 your specific challenges and goals, ensuring the best possible
                 outcomes.{" "}
               </p>{" "}
@@ -195,7 +195,7 @@ const page = () => {
               </p>{" "}
               <p className="mt-7 leading-loose text-[16px]">
                 {" "}
-                Continuous Support:Our partnership doesn't end with the
+                Continuous Support:Our partnership doesn&apos;t end with the
                 development phase. We offer ongoing support and maintenance to
                 ensure the optimal performance of your AI applications.{" "}
               </p>
@@ -269,4 +269,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
