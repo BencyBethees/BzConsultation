@@ -1,6 +1,6 @@
 "use client";
 import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
-import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const services = [
   "AI Development",
@@ -18,38 +18,14 @@ const services = [
   "Website Testing Services",
 ];
 
-const Page = () => {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [showArrow, setShowArrow] = useState(false);
+const page = () => {
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-
-      const progress = (scrollTop / docHeight) * 100;
-
-      setScrollProgress(progress);
-      setShowArrow(scrollTop > 200);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div>
       {/* ================= HERO ================= */}
       <section className="page-header relative consultant min-h-[50vh] sm:min-h-[40vh] md:min-h-[60vh] flex items-center">
-        <div className="absolute h-full bg-img inset-0 bg-gray-200 dark:bg-gray-900" />
+        <div className="absolute h-full bg-Image inset-0 bg-gray-200 dark:bg-gray-900" />
         <div className="absolute overlay hidden dark:block" />
 
         <BreadcrumbWrapper />
@@ -77,7 +53,7 @@ const Page = () => {
           <div className="w-full lg:w-3/4 flex flex-col gap-6 order-2">
             {/* Main Image */}
             <div className="order-1">
-              <img
+              <Image
                 src="/ai_development.jpg"
                 alt="AI"
                 className="w-full h-full object-cover"
@@ -206,7 +182,7 @@ const Page = () => {
             <div className="flex flex-col lg:flex-row gap-10 order-3 items-center">
               {/* Circular Image */}
               <div className="order-1">
-                <img
+                <Image
                   className="rounded-full w-83 h-83 object-cover"
                   src="/r.jpg"
                   alt=""

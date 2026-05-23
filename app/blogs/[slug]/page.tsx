@@ -1,10 +1,11 @@
 "use client";
 import Threecard from "@/components/Blog/Threecard";
 import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
-import Header from "@/components/Header";
+import img from "next/image";
 import { useParams } from "next/navigation";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+
 
 const blogsData = [
   {
@@ -934,6 +935,12 @@ export default function BlogPage() {
 
   return (
     <>
+       <section className="page-header relative consultant min-h-[50vh] sm:min-h-[40vh] md:min-h-[60vh] flex items-center">
+        <div className="absolute h-full bg-img inset-0 bg-gray-200 dark:bg-gray-900" />
+        <div className="absolute overlay hidden dark:block" />
+
+        <BreadcrumbWrapper />
+      </section>
       <div className="max-w-7xl mx-auto pl-3 pr-6 md:pl-24 md:pr-16 py-12">
         <div className="flex flex-col min-[1049px]:flex-row gap-6 items-start">
           {/* LEFT SIDE */}

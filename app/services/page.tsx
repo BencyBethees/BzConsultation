@@ -1,14 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
-import Marquee from "react-fast-marquee";
 import { FaCheck } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import AOS from "aos";
 
 import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
+import img from "next/image";
 
 interface Service {
   icon: string;
@@ -17,30 +16,10 @@ interface Service {
   link: string;
 }
 
-const HeroBackground = () => {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-
-  return (
-    <div
-      className="absolute inset-0 w-full h-full bg-no-repeat bg-center bg-cover transition-all duration-500"
-      style={{
-        backgroundImage:
-          resolvedTheme === "dark" ? "url('/bg.jpg')" : "url('/bg.jpg')",
-      }}
-    />
-  );
-};
 
 const Page = () => {
   const [services, setServices] = useState<Service[]>([]);
-
-  const [showArrow, setShowArrow] = useState(false);
-
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     AOS.init({
@@ -49,28 +28,7 @@ const Page = () => {
     AOS.refresh();
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-
-      const progress = (scrollTop / docHeight) * 100;
-
-      setScrollProgress(progress);
-      setShowArrow(scrollTop > 200);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+ 
 
   useEffect(() => {
     fetch("/api/services")
@@ -291,7 +249,7 @@ const Page = () => {
                 className="absolute w-[200%] h-[200%] object-contain animate-spin [animation-duration:4s]"
               />
 
-              {/* Main Oval Image */}
+              {/* Main Oval img */}
               <div className="w-[85%] h-[79%] rounded-[50%] -ms-10 overflow-hidden z-10 shadow-2xl">
                 <img
                   src="/man.png"
