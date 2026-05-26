@@ -18,8 +18,18 @@ export default function ContactFormPage() {
     phone: "",
     project: "",
   });
-
-  const [errors, setErrors] = useState<any>({});
+type ErrorType = {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  project?: string;
+  timeline?: string;
+  businessType?: string;
+  source?: string;
+  captcha?: string;
+};
+  const [errors, setErrors] = useState<ErrorType>({});
 
   // HANDLE CHANGE + CLEAR ERROR
   const handleChange = (
@@ -30,15 +40,15 @@ export default function ContactFormPage() {
       [e.target.name]: e.target.value,
     });
 
-    setErrors((prev: any) => ({
-      ...prev,
-      [e.target.name]: "",
-    }));
+    setErrors((prev: Record<string, string>) => ({
+  ...prev,
+  [e.target.name]: "",
+}));
   };
 
   // VALIDATION
   const validateForm = () => {
-    const newErrors: any = {};
+    const newErrors: ErrorType = {};
 
     if (!formData.firstName.trim())
       newErrors.firstName = "First name is required";

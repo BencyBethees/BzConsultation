@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
 import AOS from "aos";
-import "aos/dist/aos.css";
+
 import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
 import img from "next/image";
 
@@ -18,7 +18,7 @@ interface Service {
 
 
 
-const page = () => {
+const Page = () => {
   const [services, setServices] = useState<Service[]>([]);
 
   useEffect(() => {
@@ -436,4 +436,4 @@ px-2 sm:px-3 md:px-4
   );
 };
 
-export default page;
+export default Page;
