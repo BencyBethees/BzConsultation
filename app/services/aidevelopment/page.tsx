@@ -23,7 +23,7 @@ const page = () => {
 
   return (
     <div>
-      {/* ================= HERO ================= */}
+    
       <section className="page-header relative consultant min-h-[50vh] sm:min-h-[40vh] md:min-h-[60vh] flex items-center">
         <div className="absolute h-full bg-Image inset-0 bg-gray-200 dark:bg-gray-900" />
         <div className="absolute overlay hidden dark:block" />
@@ -31,10 +31,10 @@ const page = () => {
         <BreadcrumbWrapper />
       </section>
 
-      {/* 2 */}
+
       <div className="bg-black py-4 px-2">
         <div className="bg-black text-white px-6 py-16 sm:py-20 text-left mx-auto flex flex-col lg:flex-row gap-10 items-start max-w-7xl">
-          {/* LEFT: Services List */}
+   
           <div className="p-7 bg-[#101010] w-full lg:w-1/3 order-1">
             {services.map((service, index) => (
               <div
@@ -49,9 +49,8 @@ const page = () => {
             ))}
           </div>
 
-          {/* RIGHT: Main Content */}
           <div className="w-full lg:w-3/4 flex flex-col gap-6 order-2">
-            {/* Main Image */}
+        
             <div className="order-1">
               <Image
                 src="/ai_development.jpg"
@@ -60,7 +59,7 @@ const page = () => {
               />
             </div>
 
-            {/* Description Text */}
+    
             <div className="mt-6 theme-text order-2">
               <h1 className="font-bold text-[30px]">AI Development</h1>
               <p className="mt-5 leading-loose text-[16px]">
@@ -175,12 +174,12 @@ const page = () => {
                 development phase. We offer ongoing support and maintenance to
                 ensure the optimal performance of your AI applications.{" "}
               </p>
-              {/* You can keep all other <p> descriptions the same */}
+             
             </div>
 
-            {/* Circular Image + Benefits */}
+            
             <div className="flex flex-col lg:flex-row gap-10 order-3 items-center">
-              {/* Circular Image */}
+          
               <div className="order-1">
                 <Image
                   className="rounded-full w-83 h-83 object-cover"
@@ -189,14 +188,14 @@ const page = () => {
                 />
               </div>
 
-              {/* Benefits List */}
+          
               <div className="order-2">
                 <h1 className="text-[30px] font-extrabold mb-5">
                   Our benefits
                 </h1>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3.5">
-                    <span className="bg-orange-400 text-black dark:text-white w-3 h-3 flex items-center justify-center rounded-full text-xs font-bold">
+                    <span className="bg-orange-400 text-black w-3 h-3 flex items-center justify-center rounded-full text-xs font-bold">
                       ✓
                     </span>
                     <span className="theme-text font-semibold text-[16px]">
@@ -245,4 +244,4 @@ const page = () => {
   );
 };
 
-export default Page;
+export default page;
