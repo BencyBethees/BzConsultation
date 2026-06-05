@@ -7,7 +7,7 @@ import Link from "next/link";
 import AOS from "aos";
 
 import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
-import img from "next/image";
+import Image from "next/image";
 
 interface Service {
   icon: string;
@@ -85,11 +85,13 @@ const Page = () => {
   flex flex-col gap-6"
             >
       
-              <img
-                src={service.icon}
-                alt={service.title}
-                className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
-              />
+              <Image
+  src={service.icon}
+  alt={service.title}
+  width={64}
+  height={64}
+  className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
+/>
 
      
               <h3 className="text-xl sm:text-lg font-bold hover:text-orange-400 cursor-pointer">
@@ -240,19 +242,23 @@ const Page = () => {
         flex items-center justify-center"
             >
   
-              <img
-                src="/c.png"
-                alt="Background Shape"
-                className="absolute w-[200%] h-[200%] object-contain animate-spin [animation-duration:4s]"
-              />
+             <Image
+  src="/c.png"
+  alt="Background Shape"
+  width={1000}
+  height={1000}
+  className="absolute w-[200%] h-[200%] object-contain animate-spin [animation-duration:4s]"
+/>
 
 
               <div className="w-[85%] h-[79%] rounded-[50%] -ms-10 overflow-hidden z-10 shadow-2xl">
-                <img
-                  src="/man.png"
-                  alt="Professional"
-                  className="w-full h-full object-cover"
-                />
+                <Image
+  src="/man.png"
+  alt="Professional"
+  width={800}
+  height={800}
+  className="w-full h-full object-cover"
+/>
               </div>
             </div>
           </div>
@@ -270,11 +276,13 @@ px-2 sm:px-3 md:px-4
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
 
           <div className="relative w-full max-w-sm overflow-hidden shadow-lg group cursor-pointer">
-            <img
-              src="/ux_1.jpg"
-              alt="UX Design"
-              className="w-full h-[350px] object-cover"
-            />
+            <Image
+  src="/ux_1.jpg"
+  alt="UX Design 2"
+  width={500}
+  height={350}
+  className="w-full h-[350px] object-cover"
+/>
 
    
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -302,11 +310,13 @@ px-2 sm:px-3 md:px-4
 
  
           <div className="relative w-full max-w-sm  overflow-hidden shadow-lg group cursor-pointer">
-            <img
-              src="/ux_2.jpg"
-              alt="UX Design 2"
-              className="w-full h-[350px] object-cover"
-            />
+            <Image
+  src="/ux_2.jpg"
+  alt="UX Design 2"
+  width={500}
+  height={350}
+  className="w-full h-[350px] object-cover"
+/>
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-56 h-56 rounded-full bg-orange-400/80 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0 p-4">
@@ -333,11 +343,13 @@ px-2 sm:px-3 md:px-4
 
  
           <div className="relative w-full max-w-sm overflow-hidden shadow-lg group cursor-pointer">
-            <img
-              src="/ux_3.jpg"
-              alt="UX Design 3"
-              className="w-full h-[350px] object-cover"
-            />
+            <Image
+  src="/ux_3.jpg"
+  alt="UX Design 2"
+  width={500}
+  height={350}
+  className="w-full h-[350px] object-cover"
+/>
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-56 h-56 rounded-full bg-orange-400/80 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0 p-4">
@@ -365,11 +377,13 @@ px-2 sm:px-3 md:px-4
 
   
           <div className="relative w-full max-w-sm overflow-hidden shadow-lg group cursor-pointer">
-            <img
-              src="/ux_4.jpg"
-              alt="UX Design 4"
-              className="w-full h-[350px] object-cover"
-            />
+          <Image
+  src="/ux_4.jpg"
+  alt="UX Design 2"
+  width={500}
+  height={350}
+  className="w-full h-[350px] object-cover"
+/>
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-56 h-56 rounded-full bg-orange-400/80 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0 p-4">
